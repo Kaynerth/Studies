@@ -1,6 +1,6 @@
 <div align="center">
 
-# Sit to learn with me!
+# Welcome! Let's learn more together!
 
 ![Background](./background.gif)
 
