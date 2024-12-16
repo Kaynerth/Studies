@@ -1,0 +1,88 @@
+[gd_scene load_steps=7 format=3 uid="uid://r50pwt2os3bs"]
+
+[ext_resource type="Script" path="res://scenes/ui.gd" id="1_i1tg3"]
+[ext_resource type="Texture2D" uid="uid://cmy7thfgra32r" path="res://addons/Tiny Swords/UI/Banners/Banner_Horizontal.png" id="1_r4v2u"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_1t5oh"]
+font_size = 32
+outline_size = 8
+outline_color = Color(0, 0, 0, 1)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_wjfow"]
+texture = ExtResource("1_r4v2u")
+texture_margin_left = 33.2969
+texture_margin_top = 22.3615
+texture_margin_right = 33.2969
+texture_margin_bottom = 45.4941
+axis_stretch_horizontal = 2
+axis_stretch_vertical = 2
+region_rect = Rect2(30.5798, 44.7198, 130.384, 128.531)
+
+[sub_resource type="LabelSettings" id="LabelSettings_tnptg"]
+font_color = Color(0, 0, 0, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_fet6w"]
+font_color = Color(0, 0, 0, 1)
+
+[node name="Ui" type="CanvasLayer"]
+script = ExtResource("1_i1tg3")
+
+[node name="TimerLabel" type="Label" parent="."]
+unique_name_in_owner = true
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -20.0
+offset_top = 28.0
+offset_right = 21.0
+offset_bottom = 51.0
+grow_horizontal = 2
+text = "12:00"
+label_settings = SubResource("LabelSettings_1t5oh")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Panel2" type="Panel" parent="."]
+visible = false
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -305.0
+offset_top = 11.0
+offset_right = -10.0
+offset_bottom = 92.0
+grow_horizontal = 0
+theme_override_styles/panel = SubResource("StyleBoxTexture_wjfow")
+
+[node name="GoldLabel" type="Label" parent="Panel2"]
+unique_name_in_owner = true
+visible = false
+layout_mode = 1
+anchors_preset = 6
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = -127.0
+offset_top = -23.5
+offset_right = -36.0
+offset_bottom = -0.5
+grow_horizontal = 0
+grow_vertical = 2
+text = "20.000 Gold"
+label_settings = SubResource("LabelSettings_tnptg")
+
+[node name="MeatLabel" type="Label" parent="Panel2"]
+unique_name_in_owner = true
+visible = false
+layout_mode = 1
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_left = 36.0
+offset_top = -23.5
+offset_right = 98.0
+offset_bottom = -0.5
+grow_vertical = 2
+text = "50 Meat"
+label_settings = SubResource("LabelSettings_fet6w")
